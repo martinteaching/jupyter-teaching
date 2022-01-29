@@ -1,0 +1,16 @@
+[Unit]
+Description=Jupyter Lab
+
+[Service]
+Type=simple
+PIDFile=/run/jupyter.pid
+ExecStart=/home/jupyter/.local/bin/jupyter lab --config=/home/jupyter/.jupyter/jupyter_notebook_config.py --collaborative
+User=jupyter
+Group=jupyter
+WorkingDirectory=/home/jupyter/workspace/
+Restart=always
+RestartSec=10
+#KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
