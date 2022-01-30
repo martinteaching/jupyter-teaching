@@ -1,0 +1,51 @@
+{
+  "@jupyterlab/apputils-extension:themes": {
+    "theme": "JupyterLab Light"
+  },
+  "@jupyterlab/mainmenu-extension:plugin": {
+    "menus": [
+      {
+        "id": "jp-mainmenu-settings",
+        "disabled": true
+      },
+      {
+        "id": "jp-mainmenu-file",
+        "items": [
+          {
+            "command": "filemenu:shutdown",
+            "disabled": true
+          }
+        ]
+      },
+      {
+        "id": "jp-mainmenu-view",
+        "items": [
+          {
+            "command": "apputils:activate-command-palette",
+            "disabled": true
+          }
+        ]
+      }
+    ]
+  },
+  "@jupyterlab/shortcuts-extension:shortcuts": {
+    "shortcuts": [
+      {
+        "command": "settingeditor:open",
+        "keys": [
+          "Accel ,"
+        ],
+        "selector": "body",
+        "disabled": true
+      },
+      {
+        "command": "apputils:activate-command-palette",
+        "keys": [
+          "Accel Shift C"
+        ],
+        "selector": "body",
+        "disabled": true
+      }
+    ]
+  }
+}
