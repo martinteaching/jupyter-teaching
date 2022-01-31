@@ -22,3 +22,12 @@ ssh -o IdentitiesOnly=yes -i $SSH_KEY $SERVER_USER@$SERVER_ADDRESS < ./config-2.
 # ---------------------------------------------- #
 ./setup-1-files.sh
 # ---------------------------------------------- #
+read -p "=> Install certbot and generate test certificate?. Continue [N|y]? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    # ---------------------------------------------- #
+    ssh -o IdentitiesOnly=yes -i $SSH_KEY $SERVER_USER@$SERVER_ADDRESS < ./config-3.sh
+    echo "Please manually request production certificate on server: `sudo certbot -n -m martin.chapman@kcl.ac.uk --agree-tos --nginx -d martinteaching.xyz -d www.martinteaching.xyz`"
+    # ---------------------------------------------- #
+fi

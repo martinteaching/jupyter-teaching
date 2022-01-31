@@ -4,11 +4,6 @@ sudo ln -s /etc/nginx/sites-available/martinteaching.xyz /etc/nginx/sites-enable
 sudo nginx -t
 sudo systemctl restart nginx
 # ---------------------------------------------- #
-echo "=> installing and running certbot..."
-sudo apt install -y certbot python3-certbot-nginx
-sudo certbot -n -m martin.chapman@kcl.ac.uk --agree-tos --test-cert --nginx -d martinteaching.xyz -d www.martinteaching.xyz
-sudo systemctl restart nginx
-# ---------------------------------------------- #
 echo "=> installing development dependencies..."
 sudo -H -u jupyter bash -c "echo 'alias python=python3' >> /home/jupyter/.bashrc"
 echo "=> installing node..."
