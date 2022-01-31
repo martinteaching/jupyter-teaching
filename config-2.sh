@@ -30,6 +30,9 @@ sudo usermod -aG docker jupyter
 sudo su ubuntu
 docker run hello-world
 # ---------------------------------------------- #
+echo "=> pulling required Docker images..."
+sudo -H -u jupyter bash -c "docker pull python:3"
+# ---------------------------------------------- #
 echo "=> installing docker compose..."
 sudo apt -y install docker-compose
 # ---------------------------------------------- #

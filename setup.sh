@@ -35,3 +35,5 @@ fi
 echo "=> copying cleanup script..."
 scp -o IdentitiesOnly=yes -i $SSH_KEY config/cleanup.sh $SERVER_USER@$SERVER_ADDRESS:/home/ubuntu/cleanup.sh
 # ---------------------------------------------- #
+echo "=> WARN: now block outgoing connections"
+# ---------------------------------------------- #
