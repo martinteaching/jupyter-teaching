@@ -28,7 +28,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     # ---------------------------------------------- #
     ssh -o IdentitiesOnly=yes -i $SSH_KEY $SERVER_USER@$SERVER_ADDRESS < ./config-3.sh
-    echo "Please manually request production certificate on server: `sudo certbot -n -m martin.chapman@kcl.ac.uk --agree-tos --nginx -d martinteaching.xyz -d www.martinteaching.xyz`"
+    echo "Please manually request production certificate on server: 'sudo certbot -n -m martin.chapman@kcl.ac.uk --agree-tos --nginx -d martinteaching.xyz -d www.martinteaching.xyz'"
     # ---------------------------------------------- #
 fi
 # ---------------------------------------------- #

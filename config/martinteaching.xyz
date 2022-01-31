@@ -36,4 +36,5 @@ map $http_upgrade $connection_upgrade {
     ''      close;
 }
 
-server_names_hash_bucket_size  128;
+# Enable for longer domain names:
+# server_names_hash_bucket_size  128;
