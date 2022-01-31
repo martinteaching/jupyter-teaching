@@ -31,3 +31,7 @@ then
     echo "Please manually request production certificate on server: `sudo certbot -n -m martin.chapman@kcl.ac.uk --agree-tos --nginx -d martinteaching.xyz -d www.martinteaching.xyz`"
     # ---------------------------------------------- #
 fi
+# ---------------------------------------------- #
+echo "=> copying cleanup script..."
+scp -o IdentitiesOnly=yes -i $SSH_KEY config/cleanup.sh $SERVER_USER@$SERVER_ADDRESS:/home/ubuntu/cleanup.sh
+# ---------------------------------------------- #

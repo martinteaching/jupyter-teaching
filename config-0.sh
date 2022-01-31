@@ -15,3 +15,6 @@ sudo -H -u jupyter bash -c 'pip install --user jupyterlab'
 sudo -H -u jupyter bash -c 'mkdir /home/jupyter/.jupyter'
 sudo -H -u jupyter bash -c 'mkdir /home/jupyter/workspace'
 # ---------------------------------------------- #
+echo "=> installing utils..."
+sudo apt -y install trash-cli
+# ---------------------------------------------- #
