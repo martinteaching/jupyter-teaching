@@ -20,3 +20,5 @@ ssh -o IdentitiesOnly=yes -i $SSH_KEY $SERVER_USER@$SERVER_ADDRESS "sudo mv /hom
 # ---------------------------------------------- #
 ssh -o IdentitiesOnly=yes -i $SSH_KEY $SERVER_USER@$SERVER_ADDRESS < ./config-2.sh
 # ---------------------------------------------- #
+./setup-1-files.sh
+# ---------------------------------------------- #
