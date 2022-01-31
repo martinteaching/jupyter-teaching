@@ -4,8 +4,13 @@ sudo ln -s /etc/nginx/sites-available/martinteaching.xyz /etc/nginx/sites-enable
 sudo nginx -t
 sudo systemctl restart nginx
 # ---------------------------------------------- #
-echo "=> installing development dependencies..."
+echo "=> configuring for development..."
 sudo -H -u jupyter bash -c "echo 'alias python=python3' >> /home/jupyter/.bashrc"
+sudo -H -u jupyter bash -c "git config --global user.email 'jupyter@sustainability'"
+sudo -H -u jupyter bash -c "git config --global user.name 'Jupyter Sustainability'"
+# ---------------------------------------------- #
+echo "=> installing development dependencies..."
+# ---------------------------------------------- #
 echo "=> installing node..."
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install -y nodejs
