@@ -4,7 +4,7 @@ Description=Jupyter Lab
 [Service]
 Type=simple
 PIDFile=/run/jupyter.pid
-ExecStart=/usr/local/bin/jupyter lab --config=/usr/local/etc/jupyter/jupyter_notebook_config.py --collaborative
+ExecStart=/home/jupyter/.local/bin/jupyter lab --config=/home/jupyter/.jupyter/jupyter_notebook_config.py --collaborative
 User=jupyter
 Group=jupyter
 WorkingDirectory=/home/jupyter/workspace/

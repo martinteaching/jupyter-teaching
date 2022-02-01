@@ -4,9 +4,9 @@ export $(cat .env | xargs)
 ssh -o IdentitiesOnly=yes -i $SSH_KEY $SERVER_USER@$SERVER_ADDRESS < ./config-0.sh
 # ---------------------------------------------- #
 echo "=> copying jupyter notebook config..."
-./copy.sh "jupyter_notebook_config.py" "/usr/local/etc/jupyter"
-./copy.sh "overrides.json" "/usr/local/share/jupyter/lab/settings"
-./copy.sh "page_config.json" "/usr/local/etc/jupyter/labconfig"
+./copy.sh "jupyter_notebook_config.py" "/home/jupyter/.jupyter"
+./copy.sh "overrides.json" "/home/jupyter/.local/share/jupyter/lab/settings"
+./copy.sh "page_config.json" "/home/jupyter/.local/etc/jupyter/labconfig"
 # ---------------------------------------------- #
 echo "=> copying jupyter service config..."
 scp -o IdentitiesOnly=yes -i $SSH_KEY config/jupyter.service $SERVER_USER@$SERVER_ADDRESS:/home/ubuntu/jupyter.service
