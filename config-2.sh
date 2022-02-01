@@ -29,6 +29,8 @@ sudo usermod -aG docker ubuntu
 sudo usermod -aG docker jupyter
 sudo su ubuntu
 docker run hello-world
+# prompt jupyter docker permission update
+sudo systemctl restart jupyter
 # ---------------------------------------------- #
 echo "=> pulling required Docker images..."
 sudo -H -u jupyter bash -c "docker pull python:3"
